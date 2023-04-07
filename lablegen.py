@@ -1,8 +1,11 @@
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __author__ = "Social Mean"
 
 
-def table_generator(dic):
+
+import pyperclip
+
+def table_generator(dic, clip=False):
     col_count = len(dic)
     row_count = len(dic[list(dic.keys())[0]])
     
@@ -28,4 +31,8 @@ def table_generator(dic):
 \\caption{}
 \\label{}
 \\end{table}"""
+
+if clip:
+    pyperclip.copy(latex_table_str)
+
     return latex_table_str
