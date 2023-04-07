@@ -32,7 +32,7 @@ def table_generator(dic, clip=False):
 \\label{}
 \\end{table}"""
 
-if clip:
-    pyperclip.copy(latex_table_str)
+    if clip:
+        pyperclip.copy(latex_table_str)
 
     return latex_table_str
